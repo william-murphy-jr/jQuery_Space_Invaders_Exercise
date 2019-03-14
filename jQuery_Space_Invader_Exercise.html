@@ -1,4 +1,4 @@
-Query<!-- Captain Planet Game HTML -->
+<!-- Space Invader jQuery HTML -->
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -15,8 +15,8 @@ Query<!-- Captain Planet Game HTML -->
     <div class="container-fluid">
       <!-- Jumbotron with Title -->
       <div class="jumbotron">
-        <h1 class="text-center"><strong>JQuery Space Invaders!</strong></h1>
-        <h4 class="text-center">Rated M for Master Software Developers Only</h4>
+        <h1 class="text-center main-title"><strong>JQuery Space Invaders!</strong></h1>
+        <h4 class="text-center">Rated <span class="rating">M</span> for Master Software Developers Only</h4>
         <hr>
         <div class="text-center">
           <button class="btn btn-warning btn-xs theme-button"> Play Sound!</button>
@@ -26,7 +26,19 @@ Query<!-- Captain Planet Game HTML -->
       <div class="row">
         <!-- Left card -->
         <div class="col-lg-6">
-          <!-- Controls (Superpower Grow/Shrink)-->
+          <!-- Title Change the title -->
+          <div class="card card-default">
+            <div class="card-heading">
+              <h3 class="card-title text-center">Change the Main Title!</h3>
+            </div>
+            <div class="card-body">
+              <div class="text-center">
+                <button class="btn btn-default btn-lg normal-title-button"><span class="fa fa-okay"></span> Normal</button>
+                <button class="btn btn-primary btn-lg change-title-button"><span class="fa fa-plus"></span> Change</button>
+              </div>
+            </div>
+          </div>
+          <!-- Controls make the Spaceship Grow & Shrink-->
           <div class="card card-default">
             <div class="card-heading">
               <h3 class="card-title text-center">Change Alien Ship Size!</h3>
@@ -39,7 +51,7 @@ Query<!-- Captain Planet Game HTML -->
               </div>
             </div>
           </div>
-          <!-- Controls (Superpower Visibility) -->
+          <!-- Controls Make Spaceship Visible) -->
           <div class="card card-default">
             <div class="card-heading">
               <h3 class="card-title text-center">Make Spaceship Invisible!</h3>
@@ -66,7 +78,7 @@ Query<!-- Captain Planet Game HTML -->
           <!-- spaceship Rotate Spaceship 0 to 90 degrees -->
           <div class="card card-default">
             <div class="card-heading">
-              <h3 class="card-title text-center">Rotatate Spaceship 90 Degrees!</h3>
+              <h3 class="card-title text-center">Rotate Spaceship 90 Degrees!</h3>
             </div>
             <div class="card-body">
               <div class="text-center">
@@ -119,147 +131,6 @@ Query<!-- Captain Planet Game HTML -->
         </div>
       </div>
     </div>
-    <script>
-      // Spaceship JavaScript/jQuery
-      // Students: As you observe the code below, notice how jQuery takes a lot of the pain
-      // out of actions that might seem tedious with Vanilla JavaScript.
-      // jQuery Ready Function (encloses all other functions)
-      // ==============================
-      $(document).ready(function() {
-        // Audio Setup
-        // ===========
-        // Create an audio element with JavaScript
-        var audioElement = document.createElement("audio");
-        // Set it's source to the location
-        // of our Spaceship theme song file.
-        audioElement.setAttribute("src", "sound/free_alien_sound_effect_extened_version_2_min.mp3");
-        // Theme Button
-        $(".theme-button").on("click", function() {
-          audioElement.play();
-        });
-        // Pause Button
-        $(".pause-button").on("click", function() {
-          audioElement.pause();
-        });
-        // Size Buttons 
-        // Create Buttons that make the action happen that is diplayed on the button
-        // ============
-        // Normal Size Spaceship
-        $(".normal-button").on("click", function() {
-          $(".captain-planet").animate({ height: "300px" });
-        });
-        // Larger Size Spaceship
-        $(".grow-button").on("click", function() {
-          $(".captain-planet").animate({ height: "500px" });
-        });
-        // Smaller Size Spaceship
-        $(".shrink-button").on("click", function() {
-          $(".captain-planet").animate({ height: "100px" });
-        });
-        // Visibility Buttons
-        // ==================
-        // Make  Spaceship Visible
-        $(".vis-button").on("click", function() {
-          $(".captain-planet").animate({ opacity: "1" });
-        });
-        // Make  Spaceship Invisible
-        $(".invis-button").on("click", function() {
-          $(".captain-planet").animate({ opacity: "0.05" });
-        });
-        // ==================
-        // Background Buttons
-        // ==================
-        $(".normal-background-button").on("click", function() {
-          $(".main-column").css({
-            "background": "white",
-            "position": "relative",
-            "z-index": "-1" });
-          console.log("main-column clicked");
-        });
-        $(".blue-sky-background-button").on("click", function () {
-          $(".main-column").css({
-            "background": "#ade3f5",
-            "position": "relative",
-            "z-index": "-1"
-          });
-          console.log("main-column clicked blue sky");
-        });
-       $(".milky-way-galaxy-background-button").on("click", function () {
-          $(".main-column").css({
-            "background": "url('./images/Milky_Way.jpg')",
-            "position":"relative",
-            "z-index":"-1"
-          }); 
-          console.log("main-column clicked milky way galaxy");
-        });
-        
-        "blue-sky-background-button"
-        "milky-way-galaxy-background-button"
-
-        // ====================
-        // === Move Buttons ===
-        // ====================
-        // Move  Spaceship Upward
-        $(".up-button").on("click", function() {
-          $(".captain-planet").animate({ top: "-=200px" }, "normal");
-        });
-        
-        // Move Back to center
-        $(".center-button").on("click", function () {
-          $(".captain-planet").css({ top: "100px", left: "40px" });
-        });
-        // Move Spaceship Downward
-        $(".down-button").on("click", function() {
-          $(".captain-planet").animate({ top: "+=200px" }, "normal");
-        });
-        // Move Spaceship Leftward
-        $(".left-button").on("click", function() {
-          $(".captain-planet").animate({ left: "-=200px" }, "normal");
-        });
-        // Move Spaceship to the Right
-        $(".right-button").on("click", function() {
-          $(".captain-planet").animate({ left: "+=200px" }, "normal");
-        });
-        // Bring Spaceship Back Original Position
-        // the same as the center button if you want it to.
-        $(".back-button").on("click", function() {
-          $(".captain-planet").animate({ top: "50px", left: "80px" }, "fast");
-        });
-        
-        // Move Events for Keyboard Presses
-        // ============================
-        // Keyboard Up
-        $(document).keyup(function(e) {
-          switch (e.which) {
-          case 38:
-            $(".captain-planet").animate({ top: "-=200px" }, "normal"); }
-        });
-        // Keyboard Center (The keycode for letter c)
-        $(document).keyup(function(e) {
-          switch (e.which) {
-          case 67:
-            $(".captain-planet").css({ position: "absolute", top: "100px", left: "40px", zIndex: "-20", height: "300px" }); }
-        });
-        // Keyboard Down
-        $(document).keyup(function (e) {
-          switch (e.which) {
-            case 40:
-              $(".captain-planet").animate({ top: "+=200px" }, "normal");
-          }
-        });
-        // Keyboard Left
-        $(document).keyup(function(e) {
-          switch (e.which) {
-          case 37:
-            $(".captain-planet").animate({ left: "-=200px" }, "normal"); }
-        });
-        // Keyboard Right
-        $(document).keyup(function(e) {
-          switch (e.which) {
-          case 39:
-            $(".captain-planet").animate({ left: "+=200px" }, "normal"); }
-        });
-      });
-    </script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
