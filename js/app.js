@@ -4,15 +4,12 @@
 // jQuery Ready Function (encloses all other functions)
 // ==============================
 
-// **********************************************************************
+// ************************ Read First **********************************
 // To help give you hints there area few selections partially filled out.
 // jQuery Methods you may find useful:
 //
 // animate, on, css
-// review the jQuery documents and you textbook for more ideas.
-//
-
-
+// review the jQuery documents and your textbook for more ideas.
 // **********************************************************************
 
 $(document).ready(function () {
@@ -33,10 +30,12 @@ $(document).ready(function () {
   $(".pause-button").on("click", function () {
     audioElement.pause();
   });
+
   // =====================
   // Change the Main Title
   // =====================
-   $('.main-title')
+   $('.main-title') // add method to change the main title
+
   // Size Buttons 
   // Create Buttons that make the action happen that is diplayed on the button
   // ============
@@ -52,6 +51,7 @@ $(document).ready(function () {
   $(".shrink-button").on("click", function () {
     $(".captain-planet").animate({ height: "100px" });
   });
+  
   // Visibility Buttons
   // ==================
   // Make  Spaceship Visible
