@@ -34,7 +34,21 @@ $(document).ready(function () {
   // =====================
   // Change the Main Title
   // =====================
-   $('.main-title') // add method to change the main title
+  $('.normal-title-button').on('click', function(e) {
+    e.preventDefault();
+    $('.main-title').css({
+      'font-size': '40px',
+      'color':'black'
+    }) // add method to change the main title
+
+  });
+  $('.change-title-button').on('click', function(e) {
+    e.preventDefault();
+    $('.main-title').css({
+      'font-size': '68px',
+      'color':'blue'
+    }) // add method to change the main title
+  })
 
   // Size Buttons 
   // Create Buttons that make the action happen that is diplayed on the button
