@@ -76,6 +76,40 @@ $(document).ready(function () {
   $(".invis-button").on("click", function () {
     $(".captain-planet").animate({ opacity: "0.05" });
   });
+
+  // ==========================
+  // Stretch Width of Spaceship
+  // ==========================
+  $('.normal-width-button').on('click', function(e) {
+    e.preventDefault();
+    var imageHeight = $('.captain-planet').height();
+    $('.captain-planet').animate({'width': '394px', 'height': imageHeight});
+  });
+
+   $('.stretch-button').on('click', function (e) {
+    e.preventDefault();
+    var imageHeight = $('.captain-planet').height();
+    $('.captain-planet').animate({'width': '750px', 'height': imageHeight});
+  });
+  // ===========================================================
+  // Rotate Spaceship 90 degrees (Clockwise & Counter-clockwise)
+  // ===========================================================
+  $('.rotate-counter-clockwise-button').on('click', function (e) {
+    e.preventDefault();
+      $('.captain-planet').css({'transform': 'rotate(45deg)', 'transition':'2s'});
+  });
+   $('.rotate-level-button').on('click', function (e) {
+     e.preventDefault();
+     $('.captain-planet').css({
+       'transform': 'rotate(0deg)',
+       'transition': '2s'
+     });
+   });
+   $('.rotate-clockwise-button').on('click', function (e) {
+    e.preventDefault();
+      $('.captain-planet').css({'transform': 'rotate(-45deg)', 'transition':'2s'});
+  });
+
   // ==================
   // Background Buttons
   // ==================
@@ -103,9 +137,6 @@ $(document).ready(function () {
     });
     console.log("main-column clicked milky way galaxy");
   });
-
-  "blue-sky-background-button"
-  "milky-way-galaxy-background-button"
 
   // ====================
   // === Move Buttons ===
