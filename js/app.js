@@ -13,6 +13,7 @@
 // **********************************************************************
 
 $(document).ready(function () {
+  var originalPrimaryImgWidth = $('.captain-planet').width();
   
   // ===========
   // Audio Setup
@@ -55,6 +56,7 @@ $(document).ready(function () {
   // ============
   // Normal Size Spaceship
   $(".normal-button").on("click", function () {
+    $(".captain-planet").css({width:''});
     $(".captain-planet").animate({ height: "300px" });
   });
   // Larger Size Spaceship
@@ -76,27 +78,30 @@ $(document).ready(function () {
   $(".invis-button").on("click", function () {
     $(".captain-planet").animate({ opacity: "0.05" });
   });
-
+  
   // ==========================
   // Stretch Width of Spaceship
   // ==========================
   $('.normal-width-button').on('click', function(e) {
     e.preventDefault();
+    $(".captain-planet").css({width:''});
     var imageHeight = $('.captain-planet').height();
-    $('.captain-planet').animate({'width': '394px', 'height': imageHeight});
-  });
-
-   $('.stretch-button').on('click', function (e) {
+    $('.captain-planet').animate({
+      height: 'imageHeight'});
+    });
+  
+  $('.stretch-button').on('click', function (e) {
     e.preventDefault();
     var imageHeight = $('.captain-planet').height();
-    $('.captain-planet').animate({'width': '750px', 'height': imageHeight});
+    var imageWidth = parseInt($('.captain-planet').width()) * 2.5;
+    $('.captain-planet').animate({'width': imageWidth, 'height': imageHeight});
   });
   // ===========================================================
   // Rotate Spaceship 90 degrees (Clockwise & Counter-clockwise)
   // ===========================================================
   $('.rotate-counter-clockwise-button').on('click', function (e) {
     e.preventDefault();
-      $('.captain-planet').css({'transform': 'rotate(45deg)', 'transition':'2s'});
+      $('.captain-planet').css({'transform': 'rotate(-45deg)', 'transition':'2s'});
   });
    $('.rotate-level-button').on('click', function (e) {
      e.preventDefault();
@@ -107,7 +112,7 @@ $(document).ready(function () {
    });
    $('.rotate-clockwise-button').on('click', function (e) {
     e.preventDefault();
-      $('.captain-planet').css({'transform': 'rotate(-45deg)', 'transition':'2s'});
+      $('.captain-planet').css({'transform': 'rotate(45deg)', 'transition':'2s'});
   });
 
   // ==================
