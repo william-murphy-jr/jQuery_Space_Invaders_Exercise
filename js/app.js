@@ -14,6 +14,7 @@
 
 $(document).ready(function () {
   var originalPrimaryImgWidth = $('.captain-planet').width();
+  var positionInDegrees = 0;
   
   // ===========
   // Audio Setup
@@ -101,7 +102,9 @@ $(document).ready(function () {
   // ===========================================================
   $('.rotate-counter-clockwise-button').on('click', function (e) {
     e.preventDefault();
-      $('.captain-planet').css({'transform': 'rotate(-45deg)', 'transition':'2s'});
+    positionInDegrees -= 45;
+
+      $('.captain-planet').css({'transform': `rotate(${positionInDegrees}deg)`, 'transition':'2s'});
   });
    $('.rotate-level-button').on('click', function (e) {
      e.preventDefault();
@@ -112,7 +115,8 @@ $(document).ready(function () {
    });
    $('.rotate-clockwise-button').on('click', function (e) {
     e.preventDefault();
-      $('.captain-planet').css({'transform': 'rotate(45deg)', 'transition':'2s'});
+     positionInDegrees += 45;
+     $('.captain-planet').css({ 'transform': `rotate(${positionInDegrees}deg)`, 'transition':'2s'});
   });
 
   // ==================
