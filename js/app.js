@@ -108,8 +108,9 @@ $(document).ready(function () {
   });
    $('.rotate-level-button').on('click', function (e) {
      e.preventDefault();
+     positionInDegrees = 0; // reset to zero
      $('.captain-planet').css({
-       'transform': 'rotate(0deg)',
+       'transform': `rotate(${positionInDegrees}deg)`,
        'transition': '2s'
      });
    });

@@ -29,7 +29,7 @@
 > action
 > Just press the keys and the actions on the keys will be carried out.
 ### Functionality
-> The exercise has students provide the following functionality.
+> The exercise has students implement the following functionality.
 
 1. Play Sound
 1. Change the Main Title!
@@ -42,17 +42,18 @@
 
 ## Requirements
 
-- Any modern Web browser should be able to run the exercise
-- etc 
+- Google Chrome is the recommended browser. 
+- However, any modern web browser running on any operating system should be able to run the exercise.
 
 ## Development
 
-- The Last Mile's Code 7370 student will be required to make this work.
+- The Last Mile's Code 7370 students will be required to duplicate the functionality of this exercise.
 
 ### Installing Dependencies
 - If you cloned the git repository then you have all the assets that you need.
-- You might want to verify that you have the latest version of jQuery installed.
+- You might want to verify that you have the latest version of jQuery installed if that matters to you.
 - You can find out what version of jQuery you are running with the following command in the Chrome Console:
+- You can also substitute `jQuery` for the `$` as it is just an alias anyway.
 
 ```sh
 > $.fn.jquery
