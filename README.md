@@ -1,11 +1,13 @@
 # Space Defender
 
-> This is demo of jQuery's capabilities. This demo had been written for The Last
-> Mile's Code 7370 computer coding class. Student's will be expected to start
-> with a nearly empty app.js file that contains only some partial code snippets
-> along with a few hints and an almost 100% completed HTML file. They are
-> provided with all the assets that they will need. Student will only need to write
-> some jQuery and to get the full functionality of this demo.
+> This demo had been written for The Last Mile's Code 7370 computer coding
+> class. It is intended to show students the capabilities and ease of use of
+> jQuery. Student's will be expected to start with a nearly empty app.js file
+> that contains only some partial code snippets along with a few hints. The
+> index.html file should require no changes. Students are provided with all 
+> the assets that they will need to complete the exercise. A student will only
+> need to write JavaScript and most importantly jQuery to implement the
+> full functionality this exercise.
 >
 >
 > Enjoy!!!
@@ -23,11 +25,13 @@
 
 ## Usage
 
-> Just navigate to the directory that contains the index.html page.
+> Navigate to the directory that contains the index.html page.
 > Right click on the index.html file and select the web browser of your 
-> Choice you should be able to click on all the buttons and see jQuery in 
-> action
-> Just press the keys and the actions on the keys will be carried out.
+> choice. You should be able to click on all the buttons and see jQuery in 
+> action.
+
+> Just press the appropriate key and the action on the key will be carried out.
+
 ### Functionality
 > The exercise has students implement the following functionality.
 
